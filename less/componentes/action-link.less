@@ -1,0 +1,20 @@
+.action-link {
+    display: block;
+    padding: 20px;
+    line-height: 20px;
+    color: @white;
+    text-decoration: none;
+    text-align: center;
+    * {
+        display: inline-block;
+        line-height: normal;
+        vertical-align: middle;    
+        &:last-child {
+            margin-left: 5px;
+        }          
+    }
+    &:hover {
+        color: @white;
+        text-decoration: none;
+    }
+}

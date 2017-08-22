@@ -1,0 +1,22 @@
+{
+  "name": "unip",
+  "version": "0.0.0",
+  "description": "Website Unip",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "jit-grunt": "^0.10.0",
+    "less": "^2.7.2",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "jquery-match-height": "^0.7.2"
+  }
+}

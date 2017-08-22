@@ -1,0 +1,80 @@
+footer {
+    position: relative;
+    border-top: .35em solid @unip-yellow;
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .footer-info {
+        padding: 20px;
+        &.left {
+            background: lighten(@unip-primary, 10%);
+        }
+        @media (min-width: @screen-md) {
+            float: left;
+            &.left {
+                width: 30%;
+            }
+            &.right {
+                width: 70%;
+            }
+        }
+        #Footer-Logo {
+            display: block;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        .footer-tel {
+            display: block;
+            text-align: center;
+            color: @white;
+            .font-style(@font-size:1.3em);
+        }
+        .social-links {
+            display: block;
+            text-align: center;
+            padding: 0;
+            + span {
+                display: none;
+            }
+            li {
+                display: inline-block;
+                margin: 0 4px;
+                .social-icon {
+                    width: 24px;
+                    height: 24px;
+                    fill: @white;
+                }
+            }
+            @media (min-width: @screen-md) {
+                display: inline-block;
+                li {
+                    .social-icon {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+        #top-link {
+            padding: 20px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            border: .1em solid @unip-yellow;
+            &:after {
+                position: absolute;
+                content: '';
+                left: 50%;
+                bottom: 50%;
+                .transform(@x: -50%; @y: 75%; @deg: 45deg);
+                width: 17px;
+                height: 17px;
+                border: .1em solid transparent;
+                border-left-color: @white;
+                border-top-color: @white;
+            }
+        }
+    }
+}

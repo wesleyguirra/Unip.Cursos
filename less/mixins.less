@@ -1,0 +1,77 @@
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.transform(@x: 0; @y: 0; @deg: 0) {
+    -webkit-transform: translate(@x, @y);
+    -moz-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+    transform: translate(@x, @y);
+    & when not (@deg = 0) {
+        -webkit-transform: translate(@x, @y) rotate(@deg);
+        -moz-transform: translate(@x, @y) rotate(@deg);
+        -ms-transform: translate(@x, @y) rotate(@deg);
+        -o-transform: translate(@x, @y) rotate(@deg);
+        transform: translate(@x, @y) rotate(@deg);
+    }
+}
+
+.box-shadow(@offset-x; @offset-y; @blur-radius; @spread-radius; @color) {
+    -webkit-box-shadow: @offset-x @offset-y @blur-radius @spread-radius @color ;
+    -moz-box-shadow: @offset-x @offset-y @blur-radius @spread-radius @color;
+    -o-box-shadow: @offset-x @offset-y @blur-radius @spread-radius @color;
+    box-shadow: @offset-x @offset-y @blur-radius @spread-radius @color;
+}
+
+.transition(@property: all; @duration: 0s; @timing-function: ease; @delay: 0s) {
+    -webkit-transition: @property @duration @timing-function @delay;
+    -moz-transition: @property @duration @timing-function @delay;
+    -o-transition: @property @duration @timing-function @delay;
+    transition: @property @duration @timing-function @delay;
+}
+
+.font-style(@font-family: 'Open Sans', sans-serif; @font-weight: 400; @font-size: 1em) {
+    font-family: @font-family;
+    font-size: @font-size;
+    font-weight: @font-weight;
+}
+
+.animation(@animation-name: none; @animation-duration: 0s; @animation-timing-function: ease; @animation-delay: 0s; @animation-iteration-count: 1; @animation-direction: normal; @animation-fill-mode: none; @animation-play-state: running) {
+        -webkit-animation-name: @animation-name;
+        -webkit-animation-duration: @animation-duration;
+        -webkit-animation-timing-function: @animation-timing-function;
+        -webkit-animation-delay: @animation-delay;
+        -webkit-animation-iteration-count: @animation-iteration-count;
+        -webkit-animation-direction: @animation-direction;
+        -webkit-animation-fill-mode: @animation-fill-mode;
+        -webkit-animation-play-state: @animation-play-state;
+        -moz-animation-name: @animation-name;
+        -moz-animation-duration: @animation-duration;
+        -moz-animation-timing-function: @animation-timing-function;
+        -moz-animation-delay: @animation-delay;
+        -moz-animation-iteration-count: @animation-iteration-count;
+        -moz-animation-direction: @animation-direction;
+        -moz-animation-fill-mode: @animation-fill-mode;
+        -moz-animation-play-state: @animation-play-state;
+        -o-animation-name: @animation-name;
+        -o-animation-duration: @animation-duration;
+        -o-animation-timing-function: @animation-timing-function;
+        -o-animation-delay: @animation-delay;
+        -o-animation-iteration-count: @animation-iteration-count;
+        -o-animation-direction: @animation-direction;
+        -o-animation-fill-mode: @animation-fill-mode;
+        -o-animation-play-state: @animation-play-state;
+        animation-name: @animation-name;
+        animation-duration: @animation-duration;
+        animation-timing-function: @animation-timing-function;
+        animation-delay: @animation-delay;
+        animation-iteration-count: @animation-iteration-count;
+        animation-direction: @animation-direction;
+        animation-fill-mode: @animation-fill-mode;
+        animation-play-state: @animation-play-state;
+
+}

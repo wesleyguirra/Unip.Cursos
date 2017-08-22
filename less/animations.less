@@ -1,0 +1,54 @@
+@keyframes drawLine {
+    to {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0), 0 0 10px 10px rgba(255, 255, 255, 0), 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+}
+@-webkit-keyframes drawLine {
+    to {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+    }
+}
+@-moz-keyframes drawLine {
+    to {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes pendulum {
+    0%, 100% {
+        .transform(@deg: 6deg);
+        transform-origin: top right;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0), 0 0 10px 10px rgba(255, 255, 255, 0), 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        .transform(@deg: -1.5deg);
+        transform-origin: top right;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0), 0 0 10px 10px rgba(255, 255, 255, 0), 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+}
+@-webkit-keyframes pendulum {
+    0%, 100% {
+        .transform(@deg: 6deg);
+        transform-origin: top right;
+    }
+
+    50% {
+        .transform(@deg: -1.5deg);
+        transform-origin: top right;
+    }
+}
+@-moz-keyframes pendulum {
+    0%, 100% {
+        .transform(@deg: 6deg);
+        transform-origin: top right;
+    }
+
+    50% {
+        .transform(@deg: -1.5deg);
+        transform-origin: top right;
+    }
+}

@@ -1,0 +1,21 @@
+.action-icon {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: .1em solid;
+    border-color: @unip-yellow;
+    .border-radius(100%);
+    &:after {
+        content: '';
+        position: absolute;
+        border: .1em solid;
+        top: 50%;
+        left: 50%;
+        width: 7px;
+        height: 7px;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        .transform(-50%; @y: -50%; @deg: 45deg);
+    }
+}

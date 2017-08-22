@@ -1,0 +1,180 @@
+// sobrescreve posicao da navbar
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    border-top: .35em solid @unip-yellow;
+    // sobrescreve posicao e altura do logo
+    .navbar-brand {
+        position: absolute;
+        height: auto;
+        left: 50%;
+        .transform(-50%);
+        svg {
+            max-height: 34px;
+        }
+        // em telas desktop e acima herda as regras de posicao do Bootstrap
+        @media (min-width: @screen-md) {
+            position: relative;
+            left: auto;
+            float: auto;
+            .transform(0);
+        }
+    }
+
+    // icone menu mobile (animacao via js)
+    .header-menu--icon {
+        position: relative;
+        display: inline-block;
+        pointer-events: none;
+        svg {
+            path {
+                stroke: @white;
+                stroke-width: 3px;
+                fill: transparent;
+            }
+        }
+        // botao que dispara acao js
+        .navbar-toggle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            cursor: pointer;
+            pointer-events: auto;
+            background: none;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        // esconde botao em telas desktop e acima
+        @media (min-width: @screen-md) {
+            display: none;
+        }
+    }
+    // menu
+    .navbar-nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding-top: 70px;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background: darken(@unip-primary, 20%);
+        > li {
+            width: 100%;
+            padding-right: 20px;
+            text-align: center;
+            &:first-child {
+                padding-left: 20px;
+            }
+            a {
+                color: @white;
+                padding: 0;
+                height: 70px;
+                line-height: 70px;
+                &:focus, &:hover {
+                    background: transparent;
+                }
+            }
+        }
+        // força layout desktop
+        @media (min-width: @screen-md) {
+            display: inline-block;
+            position: relative;
+            padding: 0;
+            width: auto;
+            height: auto;
+            z-index: auto;
+            background: transparent;
+            > li {
+                width: auto;
+            }
+        }
+    }
+    // link acesse seu ambiente academico
+    .navbar-right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0;
+        .navbar-link {
+            display: block;
+            padding: 0 10px;
+            color: @unip-yellow;
+            text-decoration: none;
+            span {
+                display: none;
+            }
+            svg {
+                height: 64px;
+            }
+            path:not(#Cordao) {
+                stroke: @white;
+                stroke-width: 1.5px;
+                fill: transparent;
+                stroke-dasharray: 100;
+                stroke-dashoffset: 0;
+            }
+            path#Cordao {
+                fill: @unip-yellow;
+            }
+            &:hover, &:focus {
+                :not(#Cordao) {
+                    // animacao topo e carneira do icone cappelo
+                    stroke-dasharray: 100;
+                    stroke-dashoffset: 80;
+                    .animation(@animation-name: drawLine; @animation-duration: 1.25s; @animation-timing-function: ease; @animation-direction: alternate; @animation-fill-mode: forwards);
+                }
+                #Cordao {
+                    // animacao cordao do icone cappelo
+                    .animation(@animation-name: pendulum; @animation-duration: 1.25s; @animation-timing-function: ease-in-out; @animation-iteration-count: infinite; @animation-direction: alternate;);
+                }
+            }
+        }
+        @media (min-width: @screen-md) {
+            position: relative;
+            .navbar-link {
+                background: @unip-primary;
+                padding: 10px;
+                span {
+                    display: inline-block;
+                    line-height: normal;
+                    i {
+                        color: @white;
+                        font-style: normal; 
+                    }
+                }
+                svg {
+                    height: 24px;
+                }
+            }
+        }
+        
+    }
+    &.navbar-interna {
+        background: @unip-primary;
+        border: none;
+        .navbar-brand {
+            background: lighten(@unip-primary, 10%);
+        }
+        .navbar-nav {
+            > li a {
+                height: 60px;
+                line-height: 60px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &.navbar-curso {
+        border: none;
+        .navbar-brand {
+            display: none;
+        }
+    }
+}

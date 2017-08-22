@@ -1,0 +1,317 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600');
+
+// Bootstrap
+@import url("../node_modules/bootstrap/less/breadcrumbs.less");
+@import url("../node_modules/bootstrap/less/variables.less");
+@import url("../node_modules/bootstrap/less/mixins.less");
+@import url("../node_modules/bootstrap/less/normalize.less");
+@import url("../node_modules/bootstrap/less/print.less");
+@import url("../node_modules/bootstrap/less/scaffolding.less");
+@import url("../node_modules/bootstrap/less/grid.less");
+@import url("../node_modules/bootstrap/less/tables.less");
+@import url("../node_modules/bootstrap/less/forms.less");
+@import url("../node_modules/bootstrap/less/responsive-utilities.less");
+@import url("../node_modules/bootstrap/less/utilities.less");
+@import url("../node_modules/bootstrap/less/navbar.less");
+@import url("../node_modules/bootstrap/less/navs.less");
+@import url("../node_modules/bootstrap/less/jumbotron.less");
+@import url("../node_modules/bootstrap/less/buttons.less");
+@import url("../node_modules/bootstrap/less/panels.less");
+
+// Núcleo
+@import url("colors");
+@import url("mixins");
+@import url("animations");
+
+// Componentes
+@import url("componentes/action-icon");
+@import url("componentes/action-link");
+@import url("componentes/buttons");
+@import url("componentes/breadcrumbs");
+@import url("componentes/card");
+@import url("componentes/footer");
+@import url("componentes/form");
+@import url("componentes/hero");
+@import url("componentes/library");
+@import url("componentes/logo");
+@import url("componentes/map");
+@import url("componentes/navbar");
+@import url("componentes/panels");
+@import url("componentes/svg-data");
+@import url("componentes/tag");
+@import url("componentes/tv-web");
+
+
+body {
+    background: @body-bg;
+    .font-style(@font-size: 14px); // valores padrões: @font-family: 'Open Sans', sans-serif; @font-weight: 400; @font-size: 1em
+    color: @white;
+}
+
+.content-title {
+    text-align: center;
+    .font-style(@font-weight: 400; @font-size: 2em);
+    .content-title--bold {
+        display: block;
+        .font-style(@font-weight: 700);
+    }
+}
+
+.modalidades {
+    padding: 0;
+    .modalidade {
+        display: inline-block;
+        margin: 5px 10px;
+        line-height: 36px;
+        &.active {
+            button {
+                background: fade(@unip-yellow, 70%);
+                color: @unip-primary;
+            }
+        }
+        button, span {
+            .font-style(@font-weight: 600);
+            background: fade(@unip-primary, 70%);
+            display: inline-block;
+            line-height: normal;
+            vertical-align: middle;
+        }
+        button {
+            padding: 12px 20px;
+            border: none;
+            color: @white;
+        }
+        span {
+            box-sizing: border-box;
+            margin-left: 2px;
+            padding: 10px;
+            stroke: @white;
+            svg {
+                width: 20px;
+                height: 20px;
+                stroke-width: 10px;
+                border: .2em solid @unip-yellow;
+            }
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: @headings-font-family;
+    font-weight: @headings-font-weight;
+}
+
+h2, .h2 {
+    @headings-font-weight: 100;
+}
+
+.is-cursos {
+    .navbar-nav {
+        > li {
+            a {
+                color: @unip-primary;
+            }
+        }
+    }
+}
+
+.seletor {
+    padding: 10px;
+    background: fade(@unip-yellow, 70%);
+    white-space: nowrap;
+    .ciencia {
+        display: inline-block;
+        width: 33.33333%;
+        padding: 12px;
+        white-space: normal;
+        svg {
+            max-width: 90px;
+            max-height: 90px;
+            fill: @white;
+            box-sizing: border-box;
+            border-radius: 100%;
+            padding: 15px;
+            margin: 0 auto;
+            display: block;
+            background: @unip-primary;
+            @media (min-width: @screen-md) {
+                max-width: 110px;
+                max-height: 110px;
+            }
+        }
+
+        &.active {
+            svg {
+                fill: @unip-primary;
+                background: @white;
+            }
+        }
+
+        .ciencia-label {
+            margin: 5px 0;
+            text-align: center;
+        }
+    }
+    
+}
+
+.buscar-por-cep {
+    background: fade(@white, 50%);
+    .search-content {
+        line-height: 90px;
+        .search-icon, .search-text {
+            box-sizing: border-box;
+            padding: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+        }
+        .search-icon {
+            svg {
+                fill: transparent;
+                stroke: @white;
+                border-radius: 100%;
+                padding: 15px;
+                stroke-width: .2em;
+                border: .2em solid @unip-yellow
+            }
+        }
+        .search-text {
+            max-width: 50%;
+            .font-style(@font-size: 1.3em);
+            word-break: normal;
+        }
+    }
+    form {
+        line-height: 64px;
+        label {
+            text-transform: uppercase;
+            .font-style(@font-size: 1.2em; @font-weight: 600)
+        }
+        * {
+            line-height: normal;
+            vertical-align: middle;
+        }
+        button {
+            background: transparent;
+            svg {
+                stroke: @white;
+            }
+        }
+    }
+
+}
+
+.cursos {
+    .categoria {
+        &.humanas {
+            background: @unip-humanas;
+        }
+        &.exatas {
+            background: @unip-exatas;
+        }
+        background: @unip-yellow;
+        .font-style(@font-weight: 300; @font-size: 3em);
+        padding: 20px;
+        margin: 10px auto;
+    }
+    .curso {
+        &.humanas {
+            border-left-color: @unip-humanas;
+        }
+        &.exatas {
+            border-left-color: @unip-exatas;
+        }
+        background: fade(lighten(@unip-primary, 10%), 50%);
+        border-left: 15px solid @white;
+        padding-left: 10px;
+        margin: 10px auto;
+        display: block;
+        line-height: 100px;
+        .curso-info, .curso-action {
+            display: inline-block;
+            line-height: normal;
+            vertical-align: middle;
+        }
+        .curso-info {
+            padding: 10px;
+            width: 77%;
+            @media (min-width: @screen-lg) {
+                min-width: 650px;
+            }
+            .curso-title {
+                .font-style(@font-weight: 300; @font-size: 2em);
+                border-bottom: solid .1em @unip-yellow;
+            }
+        }
+        .curso-action {
+            padding: 7px;
+            svg {
+                padding: 3px;
+                display: block;
+                max-width: 45px;
+                max-height: 45px;
+                border-radius: 100%;
+                border: .2em solid @unip-yellow;
+                stroke-width: .2em;
+                stroke: @white;
+            }
+        }
+    }
+}
+
+#hero {
+    .form-search {
+        margin-bottom: 40px;
+        line-height: 50px;
+        * {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+        }
+        input, button[type=submit] {
+            background: fade(@unip-primary, 70%);
+            margin: 5px 0;
+        }
+        input {
+            .font-style(@font-size: 1.6em);
+            max-width: 100%;
+            color: @white;
+            @media (min-width: @screen-md) {
+                min-width: 400px;
+            }
+        }
+        button[type=submit] {
+            svg {
+                stroke: @white;
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
+
+.sidebar {
+    position: relative;
+    img {
+        max-width: 100%;
+    }
+    h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        .font-style(@font-weight: 300; @font-size: 2em);
+        .transform(@deg: -90deg);
+    }
+    .sidebar-content {
+        position: absolute;
+        width: 95%;
+        height: 95%;
+        top: 50%;
+        left: 50%;
+        .transform(-50%; -50%);
+        background: fade(@unip-primary, 70%);
+    }
+}

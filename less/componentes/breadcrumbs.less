@@ -1,0 +1,15 @@
+.breadcrumb {
+    margin: 0;
+    background-color: @unip-primary;
+    > li {
+        a {
+            color: @white;
+            text-transform: uppercase;
+            .font-style(@font-weight: 600);
+        }
+        + li:before {
+            content: '\003e';
+            color: @unip-yellow;
+        }
+    }
+}

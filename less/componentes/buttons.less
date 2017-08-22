@@ -1,0 +1,39 @@
+.btn {
+    border-radius: 0;
+    padding: 12px 20px;
+    line-height: 50px;
+    * {
+        line-height: normal;
+        vertical-align: middle;
+    }
+    &.btn-primary {
+        background: transparent;
+        .transition(all; .2s; linear);
+        color: @unip-primary;
+        border: none;
+        svg {
+            stroke: @unip-primary;
+            border-color: @unip-yellow;
+        }
+    }
+}
+
+.btn-plus {
+    padding: 2px;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 100%;
+    stroke-width: .3em;
+    border: .1em solid @unip-yellow;
+}
+
+.btn-search {
+    padding: 2px;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 100%;
+    stroke-width: .3em;
+    stroke: @unip-primary;
+    border: .1em solid @unip-yellow;
+}
+

@@ -1,0 +1,66 @@
+.library {
+    padding: 20px 0;
+    position: relative;
+    .library-book {
+        float: left;
+        display: table;
+        width: 25%;
+        outline-color: @unip-yellow;
+        .transition(@property: all; @timing-function: ease; @duration: .2s);
+        .book-cover {
+            display: table-cell;
+            max-height: 100%;
+            max-width: 100%;
+            vertical-align: middle;
+            background: @unip-primary;
+            img {
+                height: 100px;
+                @media (min-width: @screen-md) {
+                    height: 180px;
+                }
+                max-width: 100%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        
+        &:hover {
+            outline: .15em solid @unip-yellow;
+            outline-offset: -10px;
+        }
+    }
+    .library-more {
+        float: left;
+        display: table;
+        width: 25%;
+        background: darken(@unip-primary, 10%);
+        .action-link {
+            position: relative;
+            display: block;
+            text-align: center;
+            padding: 0;
+            height: 100px;
+            @media (min-width: @screen-md) {
+                height: 180px;
+            }
+            .action-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                .transform(@x: -50%; @y: -50%);
+                margin: 0;
+                width: 40px;
+                height: 40px;
+                &:after {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
