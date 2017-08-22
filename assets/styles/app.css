@@ -3895,6 +3895,7 @@ input[type="button"].btn-block {
   }
 }
 footer {
+  background: #274e7c;
   position: relative;
   border-top: 0.35em solid #FFF200;
 }
@@ -3933,6 +3934,18 @@ footer .footer-info .footer-tel {
   font-size: 1.3em;
   font-weight: 400;
 }
+footer .footer-info ul {
+  padding: 0;
+}
+footer .footer-info ul li {
+  display: block;
+}
+footer .footer-info ul li.title {
+  color: #FFF200;
+}
+footer .footer-info ul li a {
+  color: #ffffff;
+}
 footer .footer-info .social-links {
   display: block;
   text-align: center;
@@ -3951,13 +3964,13 @@ footer .footer-info .social-links li .social-icon {
   fill: #ffffff;
 }
 @media (min-width: 992px) {
-  footer .footer-info .social-links {
-    display: inline-block;
-  }
   footer .footer-info .social-links li .social-icon {
     width: 18px;
     height: 18px;
   }
+}
+footer .footer-info p {
+  text-align: center;
 }
 footer .footer-info #top-link {
   padding: 20px;
@@ -4213,16 +4226,18 @@ form button[type=submit] {
   }
 }
 .navbar {
+  background: #274e7c;
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 0;
   z-index: 99;
-  border-top: 0.35em solid #FFF200;
+  margin: 0;
 }
 .navbar .navbar-brand {
   position: absolute;
   height: auto;
   left: 50%;
+  background: #3366a3;
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
@@ -4294,8 +4309,9 @@ form button[type=submit] {
 .navbar .navbar-nav > li a {
   color: #ffffff;
   padding: 0;
-  height: 70px;
-  line-height: 70px;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
 }
 .navbar .navbar-nav > li a:focus,
 .navbar .navbar-nav > li a:hover {
@@ -4435,23 +4451,15 @@ form button[type=submit] {
     height: 24px;
   }
 }
-.navbar.navbar-interna {
-  background: #274e7c;
-  border: none;
-}
-.navbar.navbar-interna .navbar-brand {
-  background: #3366a3;
-}
-.navbar.navbar-interna .navbar-nav > li a {
-  height: 60px;
-  line-height: 60px;
-  vertical-align: middle;
-}
 .navbar.navbar-curso {
-  border: none;
+  position: absolute;
+  background: transparent;
 }
 .navbar.navbar-curso .navbar-brand {
   display: none;
+}
+.navbar.navbar-curso .navbar-nav li > a {
+  color: #274e7c;
 }
 .panel-library {
   background: #3366a3;
@@ -4889,4 +4897,51 @@ h6,
   font-family: 'Open Sans', sans-serif;
   font-size: 1.4em;
   font-weight: 700;
+}
+.curso-img {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.curso-img img {
+  width: 100%;
+}
+.curso-header {
+  padding: 20px;
+  padding-bottom: 60px;
+  background: rgba(39, 78, 124, 0.5);
+}
+.curso-header .curso-title {
+  box-sizing: border-box;
+  border-bottom: 0.15em solid #FFF200;
+}
+.curso-content {
+  background: transparent;
+}
+.curso-content .nav-tabs {
+  margin-top: -60px;
+  border-bottom: none;
+}
+.curso-content .nav-tabs li {
+  margin-bottom: -2px;
+}
+.curso-content .nav-tabs li.active a {
+  background: #274e7c;
+  color: #ffffff;
+  border: none;
+}
+.curso-content .nav-tabs li a {
+  padding: 20px;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+.curso-content .nav-tabs li a:hover,
+.curso-content .nav-tabs li a:focus {
+  border-color: transparent;
+}
+.curso-content content {
+  display: block;
+  padding: 20px;
+  background: #274e7c;
 }

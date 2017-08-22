@@ -1,4 +1,5 @@
 footer {
+    background: @unip-primary;
     position: relative;
     border-top: .35em solid @unip-yellow;
     &:after {
@@ -31,6 +32,18 @@ footer {
             color: @white;
             .font-style(@font-size:1.3em);
         }
+        ul {
+            padding: 0;
+            li {
+                display: block;
+                &.title {
+                    color: @unip-yellow;
+                }
+                a {
+                    color: @white;
+                }
+            }
+        }
         .social-links {
             display: block;
             text-align: center;
@@ -48,7 +61,6 @@ footer {
                 }
             }
             @media (min-width: @screen-md) {
-                display: inline-block;
                 li {
                     .social-icon {
                         width: 18px;
@@ -56,6 +68,9 @@ footer {
                     }
                 }
             }
+        }
+        p {
+            text-align: center;
         }
         #top-link {
             padding: 20px;

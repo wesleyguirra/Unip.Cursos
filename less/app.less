@@ -37,6 +37,7 @@
 @import url("componentes/logo");
 @import url("componentes/map");
 @import url("componentes/navbar");
+@import url("componentes/navs");
 @import url("componentes/panels");
 @import url("componentes/svg-data");
 @import url("componentes/tag");
@@ -338,4 +339,58 @@ h2, .h2 {
 .arrow-title {
     color: @unip-yellow;
     .font-style(@font-weight: 700; @font-size: 1.4em)
+}
+
+.curso-img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    img {
+        width: 100%;
+    }
+}
+
+.curso-header, .curso-content {
+}
+
+.curso-header {
+    padding: 20px;
+    padding-bottom: 60px;
+    background: fade(@unip-primary, 50%);
+    .curso-title {
+        box-sizing: border-box;
+        border-bottom: .15em solid @unip-yellow; 
+    }
+}
+
+.curso-content {
+    background: transparent;
+    .nav-tabs {
+        margin-top: -60px;
+        border-bottom: none;
+        li {
+            margin-bottom: -2px;
+            &.active {
+                a {
+                    background: @unip-primary;
+                    color: @white;
+                    border: none;
+                }
+            }
+            a {
+                padding: 20px;
+                border-radius: 0;
+                background: fade(@white, 30%);
+                color: @white;
+                &:hover, &:focus {
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    content {
+        display: block;
+        padding: 20px; 
+        background: @unip-primary;
+    }
 }

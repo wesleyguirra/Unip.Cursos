@@ -1,15 +1,17 @@
 // sobrescreve posicao da navbar
 .navbar {
+    background: @unip-primary;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     z-index: 99;
-    border-top: .35em solid @unip-yellow;
+    margin: 0;
     // sobrescreve posicao e altura do logo
     .navbar-brand {
         position: absolute;
         height: auto;
         left: 50%;
+        background: lighten(@unip-primary, 10%);
         .transform(-50%);
         svg {
             max-height: 34px;
@@ -75,8 +77,9 @@
             a {
                 color: @white;
                 padding: 0;
-                height: 70px;
-                line-height: 70px;
+                height: 60px;
+                line-height: 60px;
+                vertical-align: middle;
                 &:focus, &:hover {
                     background: transparent;
                 }
@@ -156,25 +159,18 @@
         }
         
     }
-    &.navbar-interna {
-        background: @unip-primary;
-        border: none;
-        .navbar-brand {
-            background: lighten(@unip-primary, 10%);
-        }
-        .navbar-nav {
-            > li a {
-                height: 60px;
-                line-height: 60px;
-                vertical-align: middle;
-            }
-        }
-    }
-
     &.navbar-curso {
-        border: none;
+        position: absolute;
+        background: transparent;
         .navbar-brand {
             display: none;
+        }
+        .navbar-nav {
+            li {
+                > a {
+                    color: @unip-primary;
+                } 
+            }
         }
     }
 }
