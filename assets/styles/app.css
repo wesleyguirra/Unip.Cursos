@@ -4217,7 +4217,7 @@ form button[type=submit] {
   color: #274e7c;
 }
 .hero-content {
-  margin: 20px 0;
+  margin-top: 20px;
 }
 .hero-content .hero-heading {
   max-width: 500px;
@@ -4415,7 +4415,7 @@ form button[type=submit] {
   z-index: 99;
   margin: 0;
 }
-.navbar .navbar-brand {
+.navbar-brand {
   position: absolute;
   height: auto;
   left: 50%;
@@ -4426,20 +4426,8 @@ form button[type=submit] {
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
-.navbar .navbar-brand svg {
+.navbar-brand svg {
   max-height: 34px;
-}
-@media (min-width: 992px) {
-  .navbar .navbar-brand {
-    position: relative;
-    left: auto;
-    float: auto;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
 }
 .navbar .header-menu--icon {
   position: relative;
@@ -4463,12 +4451,7 @@ form button[type=submit] {
   margin: 0;
   padding: 0;
 }
-@media (min-width: 992px) {
-  .navbar .header-menu--icon {
-    display: none;
-  }
-}
-.navbar .navbar-nav {
+.navbar-nav {
   display: none;
   position: absolute;
   top: 0;
@@ -4480,69 +4463,56 @@ form button[type=submit] {
   z-index: -1;
   background: #0f1d2e;
 }
-.navbar .navbar-nav > li {
+.navbar-nav > li {
   width: 100%;
   padding-right: 20px;
   text-align: center;
 }
-.navbar .navbar-nav > li:first-child {
+.navbar-nav > li:first-child {
   padding-left: 20px;
 }
-.navbar .navbar-nav > li a {
+.navbar-nav > li a {
   color: #ffffff;
   padding: 0;
   height: 60px;
   line-height: 60px;
   vertical-align: middle;
 }
-.navbar .navbar-nav > li a:focus,
-.navbar .navbar-nav > li a:hover {
+.navbar-nav > li a:focus,
+.navbar-nav > li a:hover {
   background: transparent;
 }
-@media (min-width: 992px) {
-  .navbar .navbar-nav {
-    display: inline-block;
-    position: relative;
-    padding: 0;
-    width: auto;
-    height: auto;
-    z-index: auto;
-    background: transparent;
-  }
-  .navbar .navbar-nav > li {
-    width: auto;
-  }
-}
-.navbar .navbar-right {
+.navbar-right {
   position: absolute;
   right: 0;
   top: 0;
   margin: 0;
 }
-.navbar .navbar-right .navbar-link {
+.navbar-right .navbar-link {
   display: block;
   padding: 0 10px;
   color: #FFF200;
   text-decoration: none;
 }
-.navbar .navbar-right .navbar-link span {
+.navbar-right .navbar-link span {
   display: none;
 }
-.navbar .navbar-right .navbar-link svg {
+.navbar-right .navbar-link svg {
   height: 64px;
 }
-.navbar .navbar-right .navbar-link path:not(#Cordao) {
+.navbar-right .navbar-link :not(#Cordao) {
   stroke: #ffffff;
   stroke-width: 1.5px;
   fill: transparent;
   stroke-dasharray: 100;
   stroke-dashoffset: 0;
 }
-.navbar .navbar-right .navbar-link path#Cordao {
+.navbar-right .navbar-link #Cordao {
+  stroke: transparent;
   fill: #FFF200;
 }
-.navbar .navbar-right .navbar-link:hover :not(#Cordao),
-.navbar .navbar-right .navbar-link:focus :not(#Cordao) {
+.navbar-right .navbar-link:hover :not(#Cordao),
+.navbar-right .navbar-link:focus :not(#Cordao) {
   stroke-dasharray: 100;
   stroke-dashoffset: 80;
   -webkit-animation-name: drawLine;
@@ -4578,8 +4548,8 @@ form button[type=submit] {
   animation-fill-mode: forwards;
   animation-play-state: running;
 }
-.navbar .navbar-right .navbar-link:hover #Cordao,
-.navbar .navbar-right .navbar-link:focus #Cordao {
+.navbar-right .navbar-link:hover #Cordao,
+.navbar-right .navbar-link:focus #Cordao {
   -webkit-animation-name: pendulum;
   -webkit-animation-duration: 1.25s;
   -webkit-animation-timing-function: ease-in-out;
@@ -4613,26 +4583,6 @@ form button[type=submit] {
   animation-fill-mode: none;
   animation-play-state: running;
 }
-@media (min-width: 992px) {
-  .navbar .navbar-right {
-    position: relative;
-  }
-  .navbar .navbar-right .navbar-link {
-    background: #274e7c;
-    padding: 10px;
-  }
-  .navbar .navbar-right .navbar-link span {
-    display: inline-block;
-    line-height: normal;
-  }
-  .navbar .navbar-right .navbar-link span i {
-    color: #ffffff;
-    font-style: normal;
-  }
-  .navbar .navbar-right .navbar-link svg {
-    height: 24px;
-  }
-}
 .navbar.navbar-curso {
   position: absolute;
   background: transparent;
@@ -4640,8 +4590,62 @@ form button[type=submit] {
 .navbar.navbar-curso .navbar-brand {
   display: none;
 }
+.navbar.navbar-curso .header-menu--icon svg path {
+  stroke: #274e7c;
+}
 .navbar.navbar-curso .navbar-nav li > a {
   color: #274e7c;
+}
+.navbar.navbar-curso .navbar-right .navbar-link :not(#Cordao) {
+  stroke: #274e7c;
+}
+@media (min-width: 992px) {
+  .navbar-brand {
+    position: relative;
+    left: auto;
+    float: auto;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .navbar .header-menu--icon {
+    display: none;
+  }
+  .navbar-nav {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    width: auto;
+    height: auto;
+    z-index: auto;
+    background: transparent;
+  }
+  .navbar-nav > li {
+    width: auto;
+  }
+  .navbar-right {
+    position: relative;
+  }
+  .navbar-right .navbar-link {
+    background: #274e7c;
+    padding: 10px;
+  }
+  .navbar-right .navbar-link span {
+    display: inline-block;
+    line-height: normal;
+  }
+  .navbar-right .navbar-link span i {
+    color: #ffffff;
+    font-style: normal;
+  }
+  .navbar-right .navbar-link svg {
+    height: 24px;
+  }
+  .navbar.navbar-curso .navbar-right .navbar-link :not(#Cordao) {
+    stroke: #ffffff;
+  }
 }
 .panel-library {
   background: #3366a3;
@@ -4700,8 +4704,8 @@ form button[type=submit] {
 }
 @media (min-width: 992px) {
   .selecionar-ciencia .ciencias .ciencia svg {
-    max-width: 110px;
-    max-height: 110px;
+    max-width: 120px;
+    max-height: 120px;
   }
 }
 .selecionar-modalidade h2 {

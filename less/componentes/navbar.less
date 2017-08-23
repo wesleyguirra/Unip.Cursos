@@ -6,22 +6,16 @@
     top: 0;
     z-index: 99;
     margin: 0;
-    // sobrescreve posicao e altura do logo
-    .navbar-brand {
+
+    &-brand {
         position: absolute;
         height: auto;
         left: 50%;
         background: lighten(@unip-primary, 10%);
         .transform(-50%);
+
         svg {
             max-height: 34px;
-        }
-        // em telas desktop e acima herda as regras de posicao do Bootstrap
-        @media (min-width: @screen-md) {
-            position: relative;
-            left: auto;
-            float: auto;
-            .transform(0);
         }
     }
 
@@ -30,7 +24,9 @@
         position: relative;
         display: inline-block;
         pointer-events: none;
+
         svg {
+
             path {
                 stroke: @white;
                 stroke-width: 3px;
@@ -50,13 +46,9 @@
             margin: 0;
             padding: 0;
         }
-        // esconde botao em telas desktop e acima
-        @media (min-width: @screen-md) {
-            display: none;
-        }
     }
     // menu
-    .navbar-nav {
+    &-nav {
         display: none;
         position: absolute;
         top: 0;
@@ -67,10 +59,12 @@
         height: 100vh;
         z-index: -1;
         background: darken(@unip-primary, 20%);
+
         > li {
             width: 100%;
             padding-right: 20px;
             text-align: center;
+
             &:first-child {
                 padding-left: 20px;
             }
@@ -85,26 +79,14 @@
                 }
             }
         }
-        // força layout desktop
-        @media (min-width: @screen-md) {
-            display: inline-block;
-            position: relative;
-            padding: 0;
-            width: auto;
-            height: auto;
-            z-index: auto;
-            background: transparent;
-            > li {
-                width: auto;
-            }
-        }
     }
     // link acesse seu ambiente academico
-    .navbar-right {
+    &-right {
         position: absolute;
         right: 0;
         top: 0;
         margin: 0;
+
         .navbar-link {
             display: block;
             padding: 0 10px;
@@ -116,14 +98,15 @@
             svg {
                 height: 64px;
             }
-            path:not(#Cordao) {
+            :not(#Cordao) {
                 stroke: @white;
                 stroke-width: 1.5px;
                 fill: transparent;
                 stroke-dasharray: 100;
                 stroke-dashoffset: 0;
             }
-            path#Cordao {
+            #Cordao {
+                stroke: transparent;
                 fill: @unip-yellow;
             }
             &:hover, &:focus {
@@ -139,14 +122,80 @@
                 }
             }
         }
-        @media (min-width: @screen-md) {
+        
+    }
+    &&-curso {
+        position: absolute;
+        background: transparent;
+
+        .navbar-brand {
+            display: none;
+        }
+        .header-menu--icon {
+
+            svg {
+
+                path {
+                    stroke: @unip-primary;
+                }
+            }
+        }
+        .navbar-nav {
+            li {
+
+                > a {
+                    color: @unip-primary;
+                } 
+            }
+        }
+        .navbar-right {
+
+                .navbar-link {
+                    :not(#Cordao) {
+                        stroke: @unip-primary;
+                    }
+                }
+            }
+    }
+}
+
+@media (min-width: @screen-md) {
+    .navbar {
+
+        &-brand {
             position: relative;
+            left: auto;
+            float: auto;
+            .transform(0);
+        }
+        .header-menu--icon {
+            display: none;
+        }
+        &-nav {
+            display: inline-block;
+            position: relative;
+            padding: 0;
+            width: auto;
+            height: auto;
+            z-index: auto;
+            background: transparent;
+
+            > li {
+                width: auto;
+            }
+        }
+
+        &-right {
+            position: relative;
+
             .navbar-link {
                 background: @unip-primary;
                 padding: 10px;
+
                 span {
                     display: inline-block;
                     line-height: normal;
+
                     i {
                         color: @white;
                         font-style: normal; 
@@ -157,19 +206,15 @@
                 }
             }
         }
-        
-    }
-    &.navbar-curso {
-        position: absolute;
-        background: transparent;
-        .navbar-brand {
-            display: none;
-        }
-        .navbar-nav {
-            li {
-                > a {
-                    color: @unip-primary;
-                } 
+
+        &&-curso {
+            .navbar-right {
+
+                .navbar-link {
+                    :not(#Cordao) {
+                        stroke: @white;
+                    }
+                }
             }
         }
     }
