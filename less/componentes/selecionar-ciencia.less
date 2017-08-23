@@ -1,0 +1,63 @@
+.selecionar-ciencia {
+    h2 {
+        color: @unip-yellow;
+    }
+    .ciencias {
+        padding: 15px;
+        white-space: nowrap;
+        background: fade(lighten(@unip-yellow, 10%), 90%);
+        
+        .ciencia {
+            box-sizing: border-box;
+            display: inline-block;
+            width: 33.33333%;
+            padding: 6px;
+            white-space: normal;
+            &.active, &:hover, &:focus {
+
+                .ciencia-icon {
+                    
+                    svg {
+                        fill: @unip-primary;
+                        background: @white;
+                    }
+                }
+            }
+            &-label {
+                margin: 5px 0;
+                text-align: center;
+                color: @unip-primary;
+            }
+            &-icon {
+                display: block;
+
+                svg {
+                    display: block;
+                    fill: @white;
+                    background: @unip-primary;
+                    padding: 25px;
+                    margin: 0 auto;
+                    border-radius: 100%;
+                    max-width: 75px;
+                    max-height: 75px;
+                }
+            }
+        }
+    }
+     
+}
+@media (min-width: @screen-md) {
+    .selecionar-ciencia {
+
+        .ciencias {
+
+            .ciencia {
+
+                svg {
+                    max-width: 110px;
+                    max-height: 110px;
+                }
+            }
+        }
+    }
+}

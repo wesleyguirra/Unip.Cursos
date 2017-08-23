@@ -1,0 +1,57 @@
+.cursos {
+    .categoria {
+        &.humanas {
+            background: @unip-humanas;
+        }
+        &.exatas {
+            background: @unip-exatas;
+        }
+        background: @unip-yellow;
+        .font-style(@font-weight: 300; @font-size: 3em);
+        padding: 20px;
+        margin: 10px auto;
+    }
+    .curso {
+        &.humanas {
+            border-left-color: @unip-humanas;
+        }
+        &.exatas {
+            border-left-color: @unip-exatas;
+        }
+        background: fade(lighten(@unip-primary, 10%), 50%);
+        border-left: 15px solid @white;
+        padding-left: 10px;
+        margin: 10px auto;
+        display: block;
+        line-height: 100px;
+        .curso-info, .curso-action {
+            display: inline-block;
+            line-height: normal;
+            vertical-align: middle;
+        }
+        .curso-info {
+            padding: 10px;
+            width: 77%;
+            @media (min-width: @screen-lg) {
+                min-width: 650px;
+            }
+            .curso-title {
+                .font-style(@font-weight: 300; @font-size: 2em);
+                border-bottom: solid .1em @unip-yellow;
+            }
+        }
+        .curso-action {
+            padding: 7px;
+            svg {
+                padding: 3px;
+                display: block;
+                max-width: 45px;
+                max-height: 45px;
+                border-radius: 100%;
+                border: .2em solid @unip-yellow;
+                stroke-width: .2em;
+                stroke: @white;
+            }
+        }
+    }
+}

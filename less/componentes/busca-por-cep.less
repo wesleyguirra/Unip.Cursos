@@ -1,0 +1,64 @@
+.buscar-por-cep {
+    
+    h2 {
+        color: @unip-yellow;
+    }
+    .search-content {
+        padding: 15px;
+        background: fade(@white, 50%);
+
+        &:after {
+            content: '';
+            clear: both;
+        }
+        
+        .search-icon, .search-text {
+            margin: 0 10px;
+        }
+        .search-icon {
+            float: left;
+
+            svg {
+                fill: transparent;
+                stroke: @white;
+                border-radius: 100%;
+                padding: 15px;
+                stroke-width: .2em;
+                border: .2em solid @unip-yellow
+            }
+        }
+        .search-text {
+            .font-style(@font-size: 1.3em);
+        }
+    }
+    .search-form {
+        line-height: 64px;
+
+        * {
+            display: inline-block;
+            line-height: normal;
+            vertical-align: middle;
+        }
+
+        label {
+            .font-style(@font-size: 1.2em; @font-weight: 600);
+            text-transform: uppercase;
+            margin-right: 10px;
+        }
+
+        input {
+            line-height: 1.71em;
+        }
+        
+        button[type=submit] {
+            background: transparent;
+
+            svg {
+                stroke: @white;
+                border-width: 2px;
+                stroke-width: 5px;
+            }
+        }
+    }
+
+}

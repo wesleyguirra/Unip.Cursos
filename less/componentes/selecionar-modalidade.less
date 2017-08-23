@@ -1,0 +1,46 @@
+.selecionar-modalidade {
+
+    h2 {
+        color: @unip-yellow;
+        text-align: right;
+    }
+
+    .modalidades {
+        padding: 0;
+        .modalidade {
+            display: inline-block;
+            margin: 5px 10px;
+            line-height: 36px;
+            &.active, &:hover {
+                button {
+                    background: fade(@unip-yellow, 70%);
+                    color: @unip-primary;
+                }
+            }
+            button, span {
+                .font-style(@font-weight: 700; @font-style: italic);
+                display: inline-block;
+                background: fade(lighten(@unip-primary, 20%), 90%);
+                line-height: normal;
+                vertical-align: middle;
+            }
+            button {
+                padding: 12px 20px;
+                border: none;
+                color: @white;
+            }
+            span {
+                box-sizing: border-box;
+                margin-left: 2px;
+                padding: 10px;
+                stroke: @white;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    stroke-width: 10px;
+                    border: .2em solid @unip-yellow;
+                }
+            }
+        }
+    }
+}
