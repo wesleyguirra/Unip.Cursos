@@ -3917,7 +3917,20 @@ body {
   content: '\003e';
   color: #FFF200;
 }
-.curso-info .curso-title {
+.curso-img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+.curso-img img {
+  width: 100%;
+}
+.curso-info {
+  padding: 20px;
+  padding-bottom: 60px;
+  background: rgba(39, 78, 124, 0.5);
+}
+.curso-info .info-title {
   font-family: 'Open Sans', sans-serif;
   font-size: 3em;
   font-weight: 100;
@@ -3933,56 +3946,20 @@ body {
   display: inline-block;
   margin: 0 10px;
 }
-.curso-img {
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-}
-.curso-img img {
-  width: 100%;
-}
-.curso-header {
-  padding: 20px;
-  padding-bottom: 60px;
-  background: rgba(39, 78, 124, 0.5);
-}
-.curso-header .curso-title {
-  box-sizing: border-box;
-  border-bottom: 0.15em solid #FFF200;
-}
-.curso-header .curso-info span {
-  margin: 0 10px;
-  display: inline-block;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
-  font-weight: 600;
-  font-style: normal;
+.curso-info span svg {
+  fill: #FFF200;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
 }
 .curso-content {
+  position: relative;
   background: transparent;
-}
-.curso-content .nav-tabs {
-  margin-top: -60px;
-  border-bottom: none;
-}
-.curso-content .nav-tabs li {
-  margin-bottom: 0;
-}
-.curso-content .nav-tabs li.active a {
-  background: #274e7c;
-  color: #ffffff;
-  border: none;
-}
-.curso-content .nav-tabs li a {
-  padding: 20px;
-  border-radius: 0;
-  background: rgba(255, 255, 255, 0.3);
-  color: #ffffff;
-  border: none;
-}
-.curso-content .nav-tabs li a:hover,
-.curso-content .nav-tabs li a:focus {
-  border-color: transparent;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-user-select: none;
+  margin-top: -40px;
 }
 .curso-content content {
   display: block;
@@ -4102,12 +4079,12 @@ footer .footer-info.left {
     width: 70%;
   }
 }
-footer .footer-info #Footer-Logo {
+footer .footer-info .info-logo {
   display: block;
   padding: 10px;
   margin: 0 auto;
 }
-footer .footer-info .footer-tel {
+footer .footer-info .info-tel {
   display: block;
   text-align: center;
   color: #ffffff;
@@ -4522,6 +4499,84 @@ form button[type=submit] {
   }
   .navbar.navbar-curso .navbar-right .navbar-link :not(#Cordao) {
     stroke: #ffffff;
+  }
+}
+.content-nav {
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 28px;
+  height: 40px;
+  background: #2d5a8f;
+}
+.content-nav:after {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(248, 248, 248, 0)), color-stop(100%, #2d5a8f));
+  height: 40px;
+  position: absolute;
+  pointer-events: none;
+  right: 0;
+  top: 0;
+  width: 24px;
+  z-index: 2;
+}
+.content-nav .nav-tabs {
+  margin: 0;
+  display: block;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.content-nav .nav-tabs li {
+  margin: 0;
+  float: none;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 16px;
+}
+.content-nav .nav-tabs li.active {
+  line-height: 40px;
+  height: 40px;
+  border-bottom: solid 2px #FFF200;
+}
+.content-nav .nav-tabs li.active a {
+  color: #FFF200;
+}
+.content-nav .nav-tabs li a {
+  line-height: 40px;
+  padding: 0;
+  display: inline-block;
+  border-radius: 0;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+}
+.content-nav .nav-tabs li a:hover,
+.content-nav .nav-tabs li a:focus {
+  border-color: transparent;
+  border: none;
+  background: transparent;
+}
+@media (min-width: 992px) {
+  .content-nav {
+    background: transparent;
+  }
+  .content-nav:after {
+    content: '';
+    background: transparent;
+  }
+  .content-nav .nav-tabs li {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .content-nav .nav-tabs li.active {
+    border-bottom: solid 2px #FFF200;
+    background: #274e7c;
+  }
+  .content-nav .nav-tabs li.active a {
+    color: #FFF200;
   }
 }
 .selecionar-ciencia h2 {

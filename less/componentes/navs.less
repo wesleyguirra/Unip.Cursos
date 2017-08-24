@@ -1,0 +1,82 @@
+.content-nav {
+    font-size: 12px;
+    text-transform: uppercase;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 28px;
+    height: 40px;
+    background: lighten(@unip-primary, 5%);
+    &:after {
+        content: '';
+        background: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(248,248,248,0)),color-stop(100%,lighten(@unip-primary, 5%)));
+        height: 40px;
+        position: absolute;
+        pointer-events: none;
+        right: 0;
+        top: 0;
+        width: 24px;
+        z-index: 2;
+    }
+
+    .nav-tabs {
+        margin: 0;
+        display: block;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        li {
+            margin: 0;
+            float: none;
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 16px;
+            &.active {
+                line-height: 40px;
+                height: 40px;
+                border-bottom: solid 2px @unip-yellow;
+                a {
+                    color: @unip-yellow;
+                }
+            }
+            a {
+                line-height: 40px;
+                padding: 0;
+                display: inline-block;
+                border-radius: 0;
+                color: @white;
+                background: transparent;
+                border: none;
+                text-decoration: none;
+                &:hover, &:focus {
+                    border-color: transparent;
+                    border: none;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-md) {
+    .content-nav {
+        background: transparent;
+        &:after {
+            content: '';
+            background: transparent;
+        }
+        .nav-tabs {
+
+            li {
+                background: fade(@white, 30%);
+                &.active {
+                    border-bottom: solid 2px @unip-yellow;
+                    background: @unip-primary;
+                    a {
+                        color: @unip-yellow;
+                    }
+                }
+            }
+        }
+    }
+}

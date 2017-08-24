@@ -1,7 +1,20 @@
 .curso {
+    &-img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        
+        img {
+            width: 100%;
+        }
+    }
     &-info {
-        .curso-title {
-            .font-style(@font-size: 3em; @font-weight: 100;);
+        padding: 20px;
+        padding-bottom: 60px;
+        background: fade(@unip-primary, 50%);
+
+        .info-title {
+            .font-style(@font-size: 3em; @font-weight: 100);
             box-sizing: border-box;
             border-bottom: 2px solid @unip-yellow;
         }
@@ -9,66 +22,28 @@
             .font-style(@font-size: 1.2em; @font-weight: 600;);
             display: inline-block;
             margin: 0 10px;
-        }
-    }
-}
-
-
-.curso-img {
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    img {
-        width: 100%;
-    }
-}
-
-.curso-header {
-    padding: 20px;
-    padding-bottom: 60px;
-    background: fade(@unip-primary, 50%);
-    .curso-title {
-        box-sizing: border-box;
-        border-bottom: .15em solid @unip-yellow; 
-    }
-    .curso-info {
-        span {
-            margin: 0 10px;
-            display: inline-block;
-            .font-style(@font-size: 1.2em; @font-weight: 600;)
-        }
-    }
-}
-
-.curso-content {
-    background: transparent;
-    .nav-tabs {
-        margin-top: -60px;
-        border-bottom: none;
-        li {
-            margin-bottom: 0;
-            &.active {
-                a {
-                    background: @unip-primary;
-                    color: @white;
-                    border: none;
-                }
-            }
-            a {
-                padding: 20px;
-                border-radius: 0;
-                background: fade(@white, 30%);
-                color: @white;
-                border: none;
-                &:hover, &:focus {
-                    border-color: transparent;
-                }
+            svg {
+                fill: @unip-yellow;
+                width: 16px;
+                height: 16px;
+                margin-right: 6px;
             }
         }
     }
-    content {
-        display: block;
-        padding: 20px; 
-        background: @unip-primary;
+
+    &-content {
+        position: relative;
+        background: transparent;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        -webkit-user-select: none;
+        margin-top: -40px;
+        content {
+            display: block;
+            padding: 20px; 
+            background: @unip-primary;
+        }
     }
 }
+
