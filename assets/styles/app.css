@@ -4148,6 +4148,7 @@ footer .footer-info ul li a {
   color: #ffffff;
 }
 footer .footer-info .social-links {
+  margin-top: 10px;
   display: block;
   text-align: center;
   padding: 0;
