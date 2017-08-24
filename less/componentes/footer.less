@@ -32,8 +32,34 @@ footer {
             color: @white;
             .font-style(@font-size:1.3em);
         }
+        .info-map {
+            padding: 10px;
+            display: block;
+            margin: 10px auto;
+            height: 200px;
+            width: 200px;
+            background: #ddd;
+            .map-icon {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                background: fade(@unip-primary, 90%);
+            }
+            svg {
+                display: block;
+                margin: 30px auto;
+                fill: transparent;
+                stroke: @white;
+                border-radius: 100%;
+                padding: 15px;
+                stroke-width: .2em;
+                border: .2em solid @unip-yellow
+            }
+        }
         ul {
             padding: 0;
+            margin: 0;
             li {
                 display: block;
                 &.title {

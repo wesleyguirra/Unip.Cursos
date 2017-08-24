@@ -2,9 +2,22 @@
 
     .categoria {
         .font-style(@font-weight: 300; @font-size: 3em);
+        position: relative;
         background: @unip-yellow;
         padding: 20px;
         margin: 10px auto;
+
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            width: 99%;
+            height: 92%;
+            .transform(-50%; -50%);
+            border: solid 2px @unip-yellow;
+        }
         
         &.humanas {
             background: @unip-humanas;
