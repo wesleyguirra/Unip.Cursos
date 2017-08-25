@@ -11,7 +11,6 @@
         position: absolute;
         height: auto;
         left: 50%;
-        background: lighten(@unip-primary, 10%);
         .transform(-50%);
 
         svg {
@@ -20,7 +19,11 @@
     }
 
     // icone menu mobile (animacao via js)
-    .header-menu--icon {
+    &-toggle {
+        float: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
         position: relative;
         display: inline-block;
         pointer-events: none;
@@ -34,7 +37,7 @@
             }
         }
         // botao que dispara acao js
-        .navbar-toggle {
+        .toggle-button {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -53,7 +56,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        margin: 0;
+        margin: -1px;
         padding-top: 70px;
         width: 100vw;
         height: 100vh;
@@ -62,12 +65,8 @@
 
         > li {
             width: 100%;
-            padding-right: 20px;
-            text-align: center;
+            padding-left: 20px;
 
-            &:first-child {
-                padding-left: 20px;
-            }
             a {
                 color: @white;
                 padding: 0;
@@ -131,7 +130,7 @@
         .navbar-brand {
             display: none;
         }
-        .header-menu--icon {
+        .navbar-toggle {
 
             svg {
 
@@ -166,9 +165,10 @@
             position: relative;
             left: auto;
             float: auto;
+            background: lighten(@unip-primary, 10%);
             .transform(0);
         }
-        .header-menu--icon {
+        &-toggle {
             display: none;
         }
         &-nav {
@@ -182,6 +182,9 @@
 
             > li {
                 width: auto;
+                a {
+                    margin-left: 0;
+                }
             }
         }
 

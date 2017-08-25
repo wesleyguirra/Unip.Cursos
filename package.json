@@ -12,11 +12,14 @@
     "bootstrap": "^3.3.7",
     "grunt": "^1.0.1",
     "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
     "jit-grunt": "^0.10.0",
     "less": "^2.7.2",
     "typescript": "^2.4.2"
   },
   "dependencies": {
-    "jquery-match-height": "^0.7.2"
+    "d3-ease": "^1.0.3",
+    "jquery": "^3.2.1",
+    "segment-js": "^1.0.8"
   }
 }

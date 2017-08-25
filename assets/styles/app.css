@@ -4316,7 +4316,6 @@ form button[type=submit] {
   position: absolute;
   height: auto;
   left: 50%;
-  background: #3366a3;
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
@@ -4326,17 +4325,21 @@ form button[type=submit] {
 .navbar-brand svg {
   max-height: 34px;
 }
-.navbar .header-menu--icon {
+.navbar-toggle {
+  float: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
   position: relative;
   display: inline-block;
   pointer-events: none;
 }
-.navbar .header-menu--icon svg path {
+.navbar-toggle svg path {
   stroke: #ffffff;
   stroke-width: 3px;
   fill: transparent;
 }
-.navbar .header-menu--icon .navbar-toggle {
+.navbar-toggle .toggle-button {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -4353,7 +4356,7 @@ form button[type=submit] {
   position: absolute;
   top: 0;
   left: 0;
-  margin: 0;
+  margin: -1px;
   padding-top: 70px;
   width: 100vw;
   height: 100vh;
@@ -4362,10 +4365,6 @@ form button[type=submit] {
 }
 .navbar-nav > li {
   width: 100%;
-  padding-right: 20px;
-  text-align: center;
-}
-.navbar-nav > li:first-child {
   padding-left: 20px;
 }
 .navbar-nav > li a {
@@ -4487,7 +4486,7 @@ form button[type=submit] {
 .navbar.navbar-curso .navbar-brand {
   display: none;
 }
-.navbar.navbar-curso .header-menu--icon svg path {
+.navbar.navbar-curso .navbar-toggle svg path {
   stroke: #274e7c;
 }
 .navbar.navbar-curso .navbar-nav li > a {
@@ -4501,13 +4500,14 @@ form button[type=submit] {
     position: relative;
     left: auto;
     float: auto;
+    background: #3366a3;
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
   }
-  .navbar .header-menu--icon {
+  .navbar-toggle {
     display: none;
   }
   .navbar-nav {
@@ -4521,6 +4521,9 @@ form button[type=submit] {
   }
   .navbar-nav > li {
     width: auto;
+  }
+  .navbar-nav > li a {
+    margin-left: 0;
   }
   .navbar-right {
     position: relative;

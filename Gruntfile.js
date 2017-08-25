@@ -5,6 +5,7 @@ module.exports = function (grunt) {
         less: {
             padrao: {
                 options: {
+                    sourceMap: true,
                     compress: false,
                     optimization: 2
                 },
@@ -20,6 +21,10 @@ module.exports = function (grunt) {
                     }
                 ]
             }
+        },
+        watch: {
+            files: './less/**/*',
+            tasks: ['less']
         }    
     });
 

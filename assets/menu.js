@@ -67,6 +67,14 @@
     });
   }
 
+  function mostrarMenu(menu) {
+    menu.style.display = "block";
+  }
+
+  function esconderMenu(menu) {
+    menu.style.display = "none";
+  }
+
   /* Awesome burger default */
 
   var pathA = document.getElementById('pathA'),
@@ -75,10 +83,10 @@
     segmentA = new Segment(pathA, beginAC, endAC),
     segmentB = new Segment(pathB, beginB, endB),
     segmentC = new Segment(pathC, beginAC, endAC),
-    trigger = document.getElementById('navbar-toggle'),
+    trigger = document.getElementById('toggle-button'),
+    menu = document.querySelector('.navbar-nav')
     toCloseIcon = true,
-    dummy = document.getElementById('dummy'),
-    wrapper = document.getElementById('header-menu--icon')
+    wrapper = document.getElementById('navbar-toggle')
 
   wrapper.style.visibility = 'visible';
 
@@ -87,15 +95,15 @@
       inAC(segmentA);
       inB(segmentB);
       inAC(segmentC);
-      $('#header-menu').fadeIn();
-      console.log('teste');
+      mostrarMenu(menu)
     } else {
       outAC(segmentA);
       outB(segmentB);
       outAC(segmentC);
-      $('#header-menu').fadeOut();
+      esconderMenu(menu)
     }
     toCloseIcon = !toCloseIcon;
+
   };
 
 })();
