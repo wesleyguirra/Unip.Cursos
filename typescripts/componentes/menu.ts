@@ -1,6 +1,6 @@
 import ease from "d3-ease"
 import Segment from "segment-js"
-import $ from "jquery"
+import $ from 'jquery'
 
 let wrapper = $('#navbar-toggle'), 
     trigger =  $('#toggle-button'),
@@ -43,8 +43,8 @@ function outB(segment) {
     segment.draw(8, 32 , 0.7, {delay: 0.1, easing: ease.easeElasticOut()})
 }
 
-trigger.on('click touchstart', toCloseIcon => {
-    if(toCloseIcon) {
+trigger.on('click touchstart', closeIcon => {
+    if(closeIcon) {
         inAC(primeirosegmento)
         inB(segundosegmento)
         inAC(terceirosegmento)
