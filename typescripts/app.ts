@@ -1,6 +1,6 @@
 import * as $ from "jquery"
-import { animateMenu } from "./componentes/menu"
+import { animateMenuIcon } from "./componentes/menu"
 
 const trigger =  $('#toggle-button')
 
-animateMenu(trigger)
+animateMenuIcon(trigger)

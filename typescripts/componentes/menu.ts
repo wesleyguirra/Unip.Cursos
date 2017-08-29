@@ -41,7 +41,7 @@ function outB(segment) {
     segment.draw(8, 32 , 0.1, {delay: 0.1, easing: ease.easeElasticOut(1, 0.4)})
 }
 
-export function animateMenu(trigger, closeIcon: boolean = true) {
+export function animateMenuIcon(trigger, closeIcon: boolean = true) {
     return trigger.on('click touchStart', () => {
         if(closeIcon) {
             inAC(primeirosegmento)
