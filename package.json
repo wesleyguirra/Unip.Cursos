@@ -15,7 +15,9 @@
     "grunt-contrib-watch": "^1.0.0",
     "jit-grunt": "^0.10.0",
     "less": "^2.7.2",
-    "typescript": "^2.4.2"
+    "ts-loader": "^2.3.4",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5"
   },
   "dependencies": {
     "d3-ease": "^1.0.3",
