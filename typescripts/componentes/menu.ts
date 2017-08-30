@@ -30,28 +30,38 @@ function outAC(segment) {
 }
 
 function outAC2(segment) {
-    segment.draw('20% - 24', '20%', 0.1, {callback: () => {outAC3(segment)}})
+    segment.draw('20% - 24', '20%', 0.3, {callback: () => {outAC3(segment)}})
 }
 
 function outAC3(segment) {
-    segment.draw(8, 32, 0.1, {easing: ease.easeElasticOut(1, 0.3)})
+    segment.draw(8, 32, 0.2, {easing: ease.easeElasticOut(1, 0.3)})
 }
 
 function outB(segment) {
-    segment.draw(8, 32 , 0.1, {delay: 0.1, easing: ease.easeElasticOut(1, 0.4)})
+    segment.draw(8, 32 , 0.2, {delay: 0.1, easing: ease.easeElasticOut(1, 0.4)})
 }
 
-export function animateMenuIcon(trigger, closeIcon: boolean = true) {
+export function animateMenuIcon(trigger, menu, closeIcon: boolean = true) {
     return trigger.on('click touchStart', () => {
         if(closeIcon) {
             inAC(primeirosegmento)
             inB(segundosegmento)
             inAC(terceirosegmento)
+            mostrarMenu(menu)
         } else {
             outAC(primeirosegmento)
             outB(segundosegmento)
             outAC(terceirosegmento)
+            esconderMenu(menu)
         }
         closeIcon = !closeIcon
     }) 
+}
+
+function mostrarMenu(menu) {
+    menu.fadeIn()
+}
+
+function esconderMenu(menu) {
+    menu.fadeOut()
 }
